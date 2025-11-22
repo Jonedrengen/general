@@ -6,6 +6,12 @@ bin-release/
 
 # Other files and folders
 .settings/
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.ipynb_checkpoints/
+
 
 # Executables
 *.swf
