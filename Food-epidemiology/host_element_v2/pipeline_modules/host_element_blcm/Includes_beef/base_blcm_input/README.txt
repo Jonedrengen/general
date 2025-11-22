@@ -12,3 +12,22 @@ Update 10/21/25 -- Edward Sung
 102125_any_element_presence_input_bigfuti_dcfuti_ExcludesBeef.csv
 	This version created does not include beef catagory in training, thus cannot predict for beef class.
 	R Code base will reflect this as well.
+
+Update 11/21/25 -- Edward Sung
+In ref_file/MalihaSelected__Sample_host_mapping_reduced.xlsx -- maliha has selected the samples from bigfuti, dcfuti, and SB27, where SB27 has the beef samples selected.
+	This version created DOES include beef category in training, thus can predict for beef class.
+	R code base has been reflected in this as well.
+
+Note from before, these samples were originally dropped during Julio Testing, where these didn't return a clustering ID (See Slack).
+106_CN_03_B20_M2_C5_P2
+30_CN_07_B26_M3_C9_P2
+34_CN_04_B28_M3_C8_P2
+34_CN_06_B28_M3_C8_P2
+39_CN_07_B20_M2_C6_P1
+40_CN_06_B20_M2_C6_P2
+71_CN_18_B38_M2_C5_P1
+Escherichia_coli_105_CN_08_B6_M2_C5_P1_GACCTTAG_L003
+Escherichia_coli_34_CN_03_B28_M3_C8_P2
+Escherichia_coli_41_CN_08_B6_M2_C7_P1_GCTAACTC_L004
+Escherichia_coli_57_CN-08_B30_M1_C3_P1
+FMC_UTI_01918
