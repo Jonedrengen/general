@@ -1,3 +1,5 @@
+Box Link: Box/LIU-PRICE\ LAB/Bioinformatics/Host_Elements/main_trainingset/
+
 Decision made Aug 21 2024 (Dan+Maliha+team) see slack for details
 retain only 49 FZEC from BigFUTI and 1 from DCFUTI as Test (training=0). Delete the rest of the FZEC from BigFUT and DCFUTI
 it has 7 contaminated meats as Test (training=0) ok-ed by Dan
@@ -14,6 +16,7 @@ Update 10/21/25 -- Edward Sung
 	R Code base will reflect this as well.
 
 Update 11/21/25 -- Edward Sung
+112125_any_element_presence_input_bigfuti_dcfuti_IncludesBeef.csv
 In ref_file/MalihaSelected__Sample_host_mapping_reduced.xlsx -- maliha has selected the samples from bigfuti, dcfuti, and SB27, where SB27 has the beef samples selected.
 	This version created DOES include beef category in training, thus can predict for beef class.
 	R code base has been reflected in this as well.
