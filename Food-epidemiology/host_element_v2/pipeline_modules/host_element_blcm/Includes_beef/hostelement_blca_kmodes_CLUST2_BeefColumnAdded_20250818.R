@@ -74,7 +74,7 @@ for (i in 1:nrow(dat)){
         if (!is.na(dat$Turkey_CL1[i]) && dat$Turkey_CL1[i] ==1) class_label[i]=5
         if (!is.na(dat$Turkey_CL2[i]) && dat$Turkey_CL2[i] ==1) class_label[i]=6
         if (!is.na(dat$Pork[i]) && dat$Pork[i] ==1) class_label[i]=7
-	if (!is.na(dat$Beef[i]) && dat$Beef[i] ==1) class_label[i]=8}
+        if (!is.na(dat$Beef[i]) && dat$Beef[i] ==1) class_label[i]=8}
 }
 # set.seed(123)
 ntrain = nrow(dat)
@@ -82,6 +82,8 @@ test_id <- which(dat[1:ntrain,]$training==0)
 
 # the "class_label" dataframe determines the test/train. Y is sent in as a whole since we need output probabilities for the test. there is no class_label value for test set
 Y <- as.matrix(dat[1:ntrain,-(1:11)])
+print(colnames(Y))
+
 
 result_folder <- file.path(curr_dir, opts$o)
 
@@ -200,7 +202,7 @@ v7 <- apply(mat_test,2,function(v) mean(v==7))
 v8 <- apply(mat_test,2,function(v) mean(v==8))
 
 
-res_dat <- cbind(v1,v2,v3,v4,v5,v6,v7,v8,dat[test_id,1:14])
+res_dat <- cbind(v1,v2,v3,v4,v5,v6,v7,v8,dat[test_id,1:13])
 colnames(res_dat)[1:8] <- c("pred_Human_CL1","pred_Human_CL2",
                             "pred_Chicken_CL1","pred_Chicken_CL2",
                             "pred_Turkey_CL1","pred_Turkey_CL2",

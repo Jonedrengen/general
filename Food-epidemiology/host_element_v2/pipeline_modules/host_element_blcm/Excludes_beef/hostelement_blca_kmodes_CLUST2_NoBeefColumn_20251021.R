@@ -84,6 +84,8 @@ test_id <- which(dat[1:ntrain,]$training==0)
 
 # the "class_label" dataframe determines the test/train. Y is sent in as a whole since we need output probabilities for the test. there is no class_label value for test set
 Y <- as.matrix(dat[1:ntrain,-(1:10)])
+print(colnames(Y))
+
 
 result_folder <- file.path(curr_dir, opts$o)
 
@@ -201,7 +203,7 @@ v6 <- apply(mat_test,2,function(v) mean(v==6))
 v7 <- apply(mat_test,2,function(v) mean(v==7))
 
 
-res_dat <- cbind(v1,v2,v3,v4,v5,v6,v7,dat[test_id,1:13])
+res_dat <- cbind(v1,v2,v3,v4,v5,v6,v7,dat[test_id,1:12])
 colnames(res_dat)[1:7] <- c("pred_Human_CL1","pred_Human_CL2",
                             "pred_Chicken_CL1","pred_Chicken_CL2",
                             "pred_Turkey_CL1","pred_Turkey_CL2",
